@@ -1,0 +1,26 @@
+{
+  "name": "cohort-xx-day-1",
+  "version": "1.0.0",
+  "description": "This repository holds the files for the TD-Development of 2 functions (dataTypes and getPrimes) and an object oriented model as part of the requirements for Andela cohort XX Day 1 lab.",
+  "main": "apps/andelabs.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "jasmine": "^2.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itunuworks/cohort-xx-day-1.git"
+  },
+  "author": "Itunuloluwa Fatoki",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itunuworks/cohort-xx-day-1/issues"
+  },
+  "homepage": "https://github.com/itunuworks/cohort-xx-day-1#readme"
+}
