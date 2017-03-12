@@ -1,6 +1,7 @@
 'use strict';
 
 var getPrimes = require('../apps/andelabs.js').getPrimes;
+require('jasmine-expect');
 
 describe('Function getPrimes, ', function(){
 
@@ -13,7 +14,31 @@ describe('Function getPrimes, ', function(){
 	describe('when fed with invalid input data, ', function(){
 		describe("in this case, a string, 'itunu', ", function(){
 			it("should return []", function(){
-				expect(getPrimes('itunu')).toBe([]);
+				expect(getPrimes('itunu')).toEqual([]);
+			})
+		})
+
+		describe("in this case, an empty object {}, ", function(){
+			it("should return []", function(){
+				expect(getPrimes({})).toEqual([]);
+			})
+		})
+
+		describe("in this case, an empty parameter, ", function(){
+			it("should return []", function(){
+				expect(getPrimes()).toEqual([]);
+			})
+		})
+
+		describe("in this case, 'null', ", function(){
+			it("should return []", function(){
+				expect(getPrimes(null)).toEqual([]);
+			})
+		})
+
+		describe("in this case, 'undefined', ", function(){
+			it("should return []", function(){
+				expect(getPrimes(undefined)).toEqual([]);
 			})
 		})
 	})
