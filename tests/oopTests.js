@@ -60,4 +60,19 @@ describe("Testing for OOP functionality in a hierachy of Classes, ", function(){
 			expect(bell204.wingConfig).toEqual('Rotary');
 		})
 	})
+
+	describe("Confirm polymorphism functioinality.", function(){
+		it("An initialized Aircraft, whose 'move' method gets called, should return, 'Yeeee!, I am flying'", function(){
+			expect(fixed.move()).toEqual('Yeeee!, I am flying');
+		})
+
+		it("An initialized FixedWingAircraft, whose 'move' method gets called, should return, 'Feels good taxiing at 450kmph. You wan try??'", function(){
+			expect(boeing747.move()).toEqual('Feels good taxiing at 450kmph. You wan try??');
+		})		
+
+		it("An initialized RotaryWingAircraft, whose 'move' method gets called, should return, 'I am soo hovering at 500 feets. Can you dare??'", function(){
+			expect(bell204.move()).toEqual('I am soo hovering at 500 feets. Can you dare??');
+		})	
+	})
+
 })	
