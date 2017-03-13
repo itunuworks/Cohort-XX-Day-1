@@ -17,37 +17,37 @@ describe("Testing for OOP functionality in a hierachy of Classes, ", function(){
 	})
 
 	it("An initialized 'Aircraft' should be an instance of class Aircraft.", function(){
-		expect(fixed.instanceof(Aircraft)).toBeTruthy();
-		expect(rotary.instanceof(Aircraft)).toBeTruthy();
+		expect(fixed instanceof(Aircraft)).toBeTruthy();
+		expect(rotary instanceof(Aircraft)).toBeTruthy();
 
 	})
 
 	describe("Confirm the inheritance hierachy using 'instanceOf', ", function(){
 		
 		it("An initialized 'FixedWingAircraft' is an instance of 'Aircraft'", function(){
-			expect(TBM850.instanceof(Aircraft)).toBeTruthy();
+			expect(TBM850 instanceof(Aircraft)).toBeTruthy();
 		})
 
 		it("An initialized 'FixedWingAircraft' is an instance of 'FixedWingAircraft'", function(){
-			expect(TBM850.instanceof(FixedWingAircraft)).toBeTruthy();
+			expect(TBM850 instanceof(FixedWingAircraft)).toBeTruthy();
 		})
 
 		it("An initialized 'RotaryWingAircraft' is an instance of 'Aircraft'", function(){
-			expect(bell204.instanceof(Aircraft)).toBeTruthy();
+			expect(bell204 instanceof(Aircraft)).toBeTruthy();
 		})
 
 		it("An initialized 'RotaryWingAircraft' is an instance of 'RotaryWingAircraft'", function(){
-			expect(bell204.instanceof(RotaryWingAircraft)).toBeTruthy();
+			expect(bell204 instanceof(RotaryWingAircraft)).toBeTruthy();
 		})
 	})	
 
 	describe("Confirm functionality of class prototypes.", function(){
-		it("An initialized FixedWingAircraft should connect with the totalLandingCycle property, ", function (){
-			expect(boeing747.totalLandingCycle).toBeDefined();
+		it("An initialized FixedWingAircraft should connect with the totalLandingCycles property, ", function (){
+			expect(boeing747.totalLandingCycles).toBeDefined();
 		})
 
-		it("An initialized RotaryWingAircraft should NOT connect with the totalLandingCycle property, ", function (){
-			expect(bell204.totalLandingCycle).not.toBeDefined();
+		it("An initialized RotaryWingAircraft should NOT connect with the totalLandingCycles property, ", function (){
+			expect(bell204.totalLandingCycles).not.toBeDefined();
 		})
 	})
 
