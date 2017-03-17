@@ -9,7 +9,9 @@
   "dependencies": {
     "jasmine": "^2.5.3"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "jasmine-expect": "^3.7.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
