@@ -2,25 +2,33 @@
 
 module.exports = {
 	dataTypes: function(argument){
+		var returnValue;
 		switch (typeof (argument)){
 			case 'number':
-				return getNumberResult(argument); break;
+				returnValue = getNumberResult(argument);
+				break;
 			case 'string':
-				return argument.length; break;
+				returnValue = argument.length; 
+				break;
 			case 'object':
 				if (argument === null){
-					return 'no value'; break;
+					returnValue = 'no value';
 				}
 				else{
-					return argument[2]; break;
+					returnValue argument[2]; 
 				}
+				break;
 			case 'undefined':
-				return 'no value'; break;
+				returnValue = 'no value';
+				break;
 			case 'boolean':
-				return argument; break;
+				returnValue = argument; 
+				break;
 			case 'function':
-				return argument(true); break;
+				returnValue = argument(true); 
+				break;
 		}
+		return returnValue;
 	},
 
 	getPrimes: function(number){
