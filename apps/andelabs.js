@@ -32,7 +32,7 @@ module.exports = {
 	},
 
 	getPrimes: function(number){
-		if (typeof(number) == 'number' && number >= 2){
+		if (typeof(number) === 'number' && number >= 2){
 	        var sieve = [];			
 	        var i=2;
 
@@ -56,7 +56,7 @@ module.exports = {
 
 //This function handles number arguments.
 function getNumberResult(argument){
-	if (argument != 100){
+	if (argument !== 100){
 		if (argument > 100)
 			return 'more than 100';
 		else 
