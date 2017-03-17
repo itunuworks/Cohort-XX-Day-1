@@ -11,11 +11,9 @@ module.exports = {
 				returnValue = argument.length; 
 				break;
 			case 'object':
-				if (argument === null){
-					returnValue = 'no value';
-				}
-				else{
-					returnValue argument[2]; 
+				returnValue = 'no value';
+				if (argument !== null){
+					returnValue = argument[2]; 
 				}
 				break;
 			case 'undefined':
@@ -32,8 +30,9 @@ module.exports = {
 	},
 
 	getPrimes: function(number){
+		var sieve = [];			
+
 		if (typeof(number) === 'number' && number >= 2){
-	        var sieve = [];			
 	        var i=2;
 
 	        top: while(i<=number){
@@ -41,27 +40,31 @@ module.exports = {
 	            var j = 0;
 
 	            i++; 
-	            while (j<sieve.length && Math.sqrt(i-1)>=sieve[j]){
-	                if ((i-1) % sieve[j] === 0) 
+
+	            for (var j = 0; j<sieve.length; j++){
+	            	if(Math.sqrt(i-1)<sieve[j]){
+	            		break;
+	            	}
+	            	if ((i-1) % sieve[j] === 0) {
 	                    continue top;
-	                j++;
+	            	}
 	            }
 	            sieve.push(i-1);
 	        }
-	        return sieve;
 	    }
-	    else return [];
+	    return sieve;
 	}
 }
 
 //This function handles number arguments.
 function getNumberResult(argument){
+	var returnValue = 'equal to 100'; 
+
 	if (argument !== 100){
-		if (argument > 100)
-			return 'more than 100';
-		else 
-			return 'less than 100';
+		returnValue = 'less than 100';
+		if (argument > 100){
+			returnValue = 'more than 100';
+		}
 	}
-	else 
-		return 'equal to 100';
+	return returnValue;
 }
